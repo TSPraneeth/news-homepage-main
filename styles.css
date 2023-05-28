@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    --Softorange: hsl(35, 77%, 62%);
+    --Softred: hsl(5, 85%, 63%);
+
+    --Offwhite: hsl(36, 100%, 99%);
+    --Grayishblue: hsl(233, 8%, 79%);
+    --Darkgrayishblue: hsl(236, 13%, 42%);
+    --Verydarkblue: hsl(240, 100%, 5%);
+}
+
+*,
+html {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    /* position: relative; */
+    background-color: var(--Offwhite);
+}
+
+main {
+    min-height: 100vh;
+    width: 90%;
+    margin: 20px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+nav {
+    /* height: 100vh; */
+    background-color: var(--Offwhite);
+}
+
+/* #nav_items
+{
+    position: absolute;
+    right: 0px;
+    width: 60%;
+    height: 100vh;
+} */
+
+.nav_Items.responsive {
+    background-color: var(--Grayishblue);
+    text-align: center;
+}
+
+#icon_menu_close,
+.nav-link {
+    display: none;
+}
+
+.mav-link
+{
+    color: var(--Darkgrayishblue);
+}
+
+.nav-link:hover
+{
+    color: var(--Softorange);
+    cursor: pointer;
+}
+
+.responsive .nav-link {
+    position: relative;
+    top: 20%;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--Verydarkblue);
+}
+
+#logo {
+    height: auto;
+    width: 30px;
+}
+
+#banner_img_mobile {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#banner_img_desktop {
+    display: none;
+}
+
+#heading {
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#content {
+    margin-bottom: 20px;
+    color: var(--Darkgrayishblue);
+}
+
+#read_more {
+    padding: 10px 30px;
+    border: none;
+    font-weight: 700;
+    background-color: var(--Softred);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+#read_more:hover
+{
+    background-color: black;
+    cursor: pointer;
+}
+
+.highlights,
+.news,
+.top_3_news {
+    margin-bottom: 40px;
+}
+
+.news {
+    background-color: var(--Verydarkblue);
+    color: white;
+    padding: 10px 12px;
+}
+
+#new {
+    color: var(--Softorange);
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.news_1,
+.news_2,
+.news_3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--Grayishblue);
+}
+
+.news_3 {
+    border-bottom: none;
+}
+
+.news_heading {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.news_content {
+    font-size: 15px;
+    color: var(--Grayishblue);
+}
+
+.top_1,
+.top_2,
+.top_3 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.top_images {
+    width: 80px;
+    height: auto;
+}
+
+.top_1_content>*,
+.top_2_content>*,
+.top_3_content>* {
+    margin-bottom: 5px;
+}
+
+#number {
+    font-size: 20px;
+    color: var(--Grayishblue);
+}
+
+#title {
+    color: black;
+    font-weight: 800;
+}
+
+#description {
+    color: var(--Grayishblue);
+}
+
+@media screen and (min-width: 768px) {
+
+    main
+    {
+        width: 75%;
+    }
+
+    nav
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    #logo
+    {
+        width: 50px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    #nav_items {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav_Items.responsive {
+        background-color: unset;
+    }
+
+    .nav-link {
+        display: block;
+        margin-bottom: unset;
+    }
+
+    #banner_img_desktop {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #banner_img_mobile {
+        display: none;
+    }
+
+    .headlines
+    {
+        display: grid;
+        grid-template-columns: 0.7fr 0.3fr;
+        gap: 20px;
+        margin: 40px 0;
+    }
+/* 
+    .news_heading
+    {
+        font-size: 14px;
+    }
+
+    .news_content, #content
+    {
+        font-size: 13px;
+    } */
+
+    .mini_content
+    {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        gap: 20px;
+    }
+
+    #heading
+    {
+        font-size: 36px;
+    }
+
+    .top_3_news
+    {
+        display: flex;
+        gap: 20px;
+    }
+}
