@@ -19,20 +19,41 @@ html {
 body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    /* position: relative; */
+    position: relative;
     background-color: var(--Offwhite);
 }
+
+#overlay {
+    position: absolute; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  
 
 main {
     min-height: 100vh;
     width: 90%;
-    margin: 20px auto;
+    margin: 0px auto;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.hamburger
+{
+    position: sticky;
+    z-index: 3;
 }
 
 nav {
@@ -49,8 +70,13 @@ nav {
 } */
 
 .nav_Items.responsive {
-    background-color: var(--Grayishblue);
-    text-align: center;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    z-index: 2;
 }
 
 #icon_menu_close,
@@ -71,8 +97,9 @@ nav {
 
 .responsive .nav-link {
     position: relative;
-    top: 20%;
-    margin-bottom: 10px;
+    top: 7%;
+    left: 25px;
+    margin-bottom: 25px;
     display: block;
 }
 
@@ -82,8 +109,13 @@ nav {
 }
 
 #logo {
-    height: auto;
-    width: 30px;
+    height: 22px;
+    width: 35px;
+}
+
+#logo, .hamburger > img
+{
+    margin-top: 20px;
 }
 
 #banner_img_mobile {
@@ -199,9 +231,16 @@ nav {
 
 @media screen and (min-width: 768px) {
 
+    header
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
     main
     {
-        width: 75%;
+        width: 90%;
+        margin: 20px auto;
     }
 
     nav
@@ -212,7 +251,9 @@ nav {
 
     #logo
     {
-        width: 50px;
+        height: auto;
+        width: 40px;
+        margin-top: unset;
     }
 
     .hamburger {
@@ -277,5 +318,13 @@ nav {
     {
         display: flex;
         gap: 20px;
+    }
+}
+
+@media screen and (min-width:990px) {
+    
+    main
+    {
+        width: 85%;
     }
 }
